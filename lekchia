@@ -1,0 +1,57 @@
+// ВИД 1(Ничего не принимают и ничего не возвращают)
+void Method1()
+{
+    Console.WriteLine("Автор ...");
+}
+Method1();
+
+//Вид 2(Что-то принимает, но ничего не возвращает)
+void Method2(string msg)
+{
+    Console.WriteLine(msg);
+}
+Method2("Текст сообщения");
+
+/* именнованные аргументы к 
+какому аргументу какое значение мы хоти дать*/
+void Method21(string msg, int count)
+{
+    int i = 0;
+    while( i < count)
+    {
+        Console.WriteLine(msg);
+        i++;
+    }
+}
+Method2(msg: "Текст", count: 4);
+// необязательно писать по порядку
+Method2(count: 4, msg: "Новый текст");
+
+//Вид 3(Что-то возвращют, но ничего не принимают)
+
+int Method3()
+{
+    return DateTime.Now.Year; /* для примера сделали,
+     чтобы Method3 показывал(год)*/
+}
+
+int year = Method3();
+Console.WriteLine(year);
+
+// Вид 4(Что-то принимают и что-то возвращают)
+
+string Method4(int count, string c)
+{
+    int i = 0;
+    string result = ""; //Пустую строку можно написать String.Empty
+
+    while (i < count)
+    {
+        result = result + c;
+        i++;
+    }
+    return result;
+}
+
+string res =  Method4(10, "мама, я гей");
+Console.WriteLine(res);
