@@ -1,4 +1,4 @@
-﻿//Пример 4-го вида из леции
+﻿//Пример 4-го вида из леции циклом while
  string Method4(int count, string c)
 {
     int i = 0;
